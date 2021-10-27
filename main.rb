@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 require_relative 'candidate_formatter'
 require_relative 'db_connector'
-require 'mysql2'
 
 db_connect = DbConnector.new
 db_connect.form_array_from_db_select

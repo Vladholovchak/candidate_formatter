@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class CandidateFormatter
   def initialize(array)
     super()
@@ -24,7 +22,7 @@ class CandidateFormatter
   def change_with_slash(string)
     if string.include?('/')
       array = string.rpartition('/')
-      "#{array.last.split(' ').first.capitalize} #{array.first.gsub(/\//, ' and ')}"
+      "#{array.last.split(' ').first&.capitalize} #{array.first.gsub(/\//, ' and ')}"
     else
       string
     end
